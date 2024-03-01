@@ -29,7 +29,7 @@ module.exports = {
       }
       const prompt = event.body.substring(prefix.length).trim();
    if (!prompt) {
-        await message.reply("⚔️ASTA⚔️:\n\nHeyo,how you have an insane amount of energy in the question you want to ask me.");
+        await message.reply("⚔️ASTA⚔️:\n\nHeyo,hope you have an insane amount of energy in the question you want to ask me.");
         return;
       }
 
