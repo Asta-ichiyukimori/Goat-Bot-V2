@@ -32,8 +32,8 @@ module.exports = {
     }
   },
   onLoad: async function () {
-    const dataPath = path.join(__dirname, "..","cmds","cache", "approvedThreads.json");
-    const pendingPath = path.join(__dirname, "..","cmds","cache", "pendingThreads.json");
+    const dataPath = path.join(__dirname, "..","events","cache", "approvedThreads.json");
+    const pendingPath = path.join(__dirname, "..","events","cache", "pendingThreads.json");
     if (!fs.existsSync(dataPath)) {
       fs.writeFileSync(dataPath, JSON.stringify([]));
     }
@@ -44,8 +44,8 @@ module.exports = {
   onStart: async function ({ api, args, message, event }) {
     const { threadID, messageID } = event;
     const type = args[0] || threadID;
-    const dataPath = path.join(__dirname, "..","cmds","cache", "approvedThreads.json");
-    const pendingPath = path.join(__dirname, "..","cmds","cache", "pendingThreads.json");
+    const dataPath = path.join(__dirname, "..","events","cache", "approvedThreads.json");
+    const pendingPath = path.join(__dirname, "..","events","cache", "pendingThreads.json");
     let data = JSON.parse(fs.readFileSync(dataPath));
     let pending = JSON.parse(fs.readFileSync(pendingPath));
 
