@@ -1,4 +1,4 @@
-. cmd install ggpt.js const { Hercai } = require('hercai');
+const { Hercai } = require('hercai');
 
 const herc = new Hercai();
 
